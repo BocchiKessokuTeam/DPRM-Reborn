@@ -7,7 +7,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.fml.network.NetworkHooks;
-import org.bocchikessokuteam.dprmreborn.containerprovider.CraftingContainerProvider;
+import org.bocchikessokuteam.dprmreborn.containerprovider.CraftingTableContainerProvider;
 import org.bocchikessokuteam.dprmreborn.file.JsonManager;
 
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class CraftingCommand implements Command<CommandSourceStack> {
         }
 
 
-        NetworkHooks.openGui(serverPlayer,new CraftingContainerProvider(), (FriendlyByteBuf) -> {
+        NetworkHooks.openGui(serverPlayer,new CraftingTableContainerProvider(), (FriendlyByteBuf) -> {
             FriendlyByteBuf.writeUtf(jsonPacket.toJSONString());
         });
         return 0;

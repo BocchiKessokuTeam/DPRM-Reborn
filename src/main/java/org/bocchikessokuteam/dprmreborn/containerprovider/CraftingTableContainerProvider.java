@@ -13,7 +13,7 @@ import org.bocchikessokuteam.dprmreborn.container.CraftingTableContainer;
 
 import javax.annotation.Nullable;
 
-public class CraftingContainerProvider implements MenuProvider {
+public class CraftingTableContainerProvider implements MenuProvider {
 
     @Nullable
     @Override

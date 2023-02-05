@@ -54,7 +54,7 @@ public class ScreenToggle {
         //追加json信息
 
         if (jsonPacket.getString("operate").equals("open_crafting_screen")){
-            NetworkHooks.openGui(serverPlayer,new CraftingContainerProvider(), (FriendlyByteBuf FriendlyByteBuf) -> {
+            NetworkHooks.openGui(serverPlayer,new CraftingTableContainerProvider(), (FriendlyByteBuf FriendlyByteBuf) -> {
                 FriendlyByteBuf.writeUtf(jsonPacket.toJSONString());
             });
         }
