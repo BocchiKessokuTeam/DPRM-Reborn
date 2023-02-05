@@ -315,7 +315,7 @@ public class JsonManager {
     }
 
     public static Component translateRegisryName(String regisryName){
-        Component name = ForgeRegistries.ITEMS.getValue(new ResourceLocation(regisryName)).getName();
+        Component name = ForgeRegistries.ITEMS.getValue(new ResourceLocation(regisryName)).getDescription();
         return name;
     }
 
