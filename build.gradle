@@ -6,7 +6,7 @@ plugins {
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 
 archivesBaseName = project.archives_base_name
-version = project.mod_version
+version = "${project.minecraft_version}-${project.mod_version}"
 group = project.maven_group
 
 loom {
@@ -28,6 +28,7 @@ dependencies {
     mappings loom.officialMojangMappings()
     forge "net.minecraftforge:forge:${project.forge_version}"
     compileOnly("com.alibaba:fastjson:1.2.72")
+    implementation('org.slf4j:slf4j-api:2.0.6')
 }
 
 processResources {
